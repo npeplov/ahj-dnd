@@ -1,0 +1,161 @@
+Build started
+git clone -q --branch=master https://github.com/npeplov/ahj-testing.git /home/appveyor/projects/ahj-testing
+git checkout -qf c39815b3782d1d557575b5980611fea0ee764f85
+Configuring 'stack'
+Enabling Node 12
+Downloading and installing node v12.21.0...
+Downloading https://nodejs.org/dist/v12.21.0/node-v12.21.0-linux-x64.tar.xz...
+######################################################################## 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v12.21.0 (npm v6.14.11)
+Running "install" scripts
+npm install
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated opn@6.0.0: The package has been renamed to `open`
+npm WARN deprecated fsevents@1.2.13: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+> puppeteer@8.0.0 install /home/appveyor/projects/ahj-testing/node_modules/puppeteer
+> node install.js
+Downloading Chromium r856583 - 136.8 Mb [====================] 100% 0.0s 
+Chromium (856583) downloaded to /home/appveyor/projects/ahj-testing/node_modules/puppeteer/.local-chromium/linux-856583
+> core-js@3.9.1 postinstall /home/appveyor/projects/ahj-testing/node_modules/core-js
+> node -e "try{require('./postinstall')}catch(e){}"
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/live-server/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.2.7 (node_modules/webpack-dev-server/node_modules/chokidar/node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.13: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+npm WARN optimize-css-assets-webpack-plugin@5.0.4 requires a peer of webpack@^4.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN testing@1.0.0 No repository field.
+added 1538 packages from 611 contributors and audited 1542 packages in 58.981s
+90 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+Running "build_script" scripts
+npm run build
+> testing@1.0.0 build /home/appveyor/projects/ahj-testing
+> webpack --config webpack.prod.js
+(node:8964) [DEP_WEBPACK_COMPILATION_OPTIMIZE_CHUNK_ASSETS] DeprecationWarning: optimizeChunkAssets is deprecated (use Compilation.hooks.processAssets instead and use one of Compilation.PROCESS_ASSETS_STAGE_* as stage option)
+assets by path assets/ 15.7 KiB
+  assets by path assets/*.gif 15.2 KiB 8 assets
+  asset assets/paysystems.json 314 bytes [emitted] [from: src/js/paysystems.json] (auxiliary name: main)
+  asset assets/license.txt 192 bytes [emitted] [from: src/license.txt] (auxiliary name: main)
+assets by chunk 12.8 KiB (name: main)
+  asset main.js 12.2 KiB [emitted] [minimized] (name: main)
+  asset 947eed798f239092d98e.css 581 bytes [emitted] [immutable] (name: main)
+asset ./index.html 732 bytes [emitted]
+Entrypoint main 12.8 KiB (15.7 KiB) = main.js 12.2 KiB 947eed798f239092d98e.css 581 bytes 10 auxiliary assets
+orphan modules 9.34 KiB [orphan] 5 modules
+runtime modules 1.06 KiB 2 modules
+cacheable modules 34.4 KiB (javascript) 15.7 KiB (asset)
+  asset modules 420 bytes (javascript) 15.7 KiB (asset)
+    modules by path ./src/images/*.gif 336 bytes (javascript) 15.2 KiB (asset) 8 modules
+    ./src/js/paysystems.json 42 bytes (javascript) 314 bytes (asset) [built] [code generated]
+    ./src/license.txt 42 bytes (javascript) 192 bytes (asset) [built] [code generated]
+  javascript modules 34 KiB
+    ./src/index.js + 4 modules 9.99 KiB [built] [code generated]
+    ./node_modules/regenerator-runtime/runtime.js 24 KiB [built] [code generated]
+css ./node_modules/css-loader/dist/cjs.js!./src/style.css 818 bytes [code generated]
+webpack 5.26.3 compiled successfully in 4416 ms
+Running "test_script" scripts
+npm run lint && npm test
+> testing@1.0.0 lint /home/appveyor/projects/ahj-testing
+> eslint . --fix
+> testing@1.0.0 test /home/appveyor/projects/ahj-testing
+> jest
+ℹ ｢wds｣: Project is running at http://localhost:9000/
+ℹ ｢wds｣: webpack output is served from undefined
+ℹ ｢wds｣: Content not from webpack is served from /home/appveyor/projects/ahj-testing
+ℹ ｢wdm｣: wait until bundle finished: /
+ℹ ｢wdm｣: assets by path assets/ 15.7 KiB
+  assets by path assets/*.gif 15.2 KiB 8 assets
+  asset assets/paysystems.json 314 bytes [emitted] [from: src/js/paysystems.json] (auxiliary name: main)
+  asset assets/license.txt 192 bytes [emitted] [from: src/license.txt] (auxiliary name: main)
+assets by chunk 986 KiB (name: main)
+  asset main.js 983 KiB [emitted] (name: main)
+  asset 4063af787a79601c2f4f.css 2.86 KiB [emitted] [immutable] (name: main)
+asset ./index.html 866 bytes [emitted]
+Entrypoint main 986 KiB (15.7 KiB) = 4063af787a79601c2f4f.css 2.86 KiB main.js 983 KiB 10 auxiliary assets
+runtime modules 1.02 KiB 6 modules
+javascript modules 369 KiB
+  modules by path ./node_modules/ 359 KiB 26 modules
+  modules by path ./src/ 10 KiB
+    modules by path ./src/js/*.js 9.29 KiB 4 modules
+    ./src/index.js 714 bytes [built] [code generated]
+    ./src/style.css 50 bytes [built] [code generated]
+asset modules 420 bytes (javascript) 15.7 KiB (asset)
+  modules by path ./src/images/*.gif 336 bytes (javascript) 15.2 KiB (asset) 8 modules
+  ./src/js/paysystems.json 42 bytes (javascript) 314 bytes (asset) [built] [code generated]
+  ./src/license.txt 42 bytes (javascript) 192 bytes (asset) [built] [code generated]
+css ./node_modules/css-loader/dist/cjs.js!./src/style.css 818 bytes [code generated]
+webpack 5.26.3 compiled successfully in 3021 ms
+ℹ ｢wdm｣: Compiled successfully.
+ PASS  e2e/e2e.test.js (6.104 s)
+ PASS  src/js/__tests__/functions.test.js
+ PASS  src/js/__tests__/jsdom.test.js
+Test Suites: 3 passed, 3 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        7.494 s
+Ran all test suites.
+Running "deploy_script" scripts
+git config --global credential.helper store
+git config --global user.name AppVeyor
+git config --global user.email ci@appveyor.com
+echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+npx push-dir --dir=dist --branch=gh-pages --force --verbose
+npx: installed 2 in 1.716s
+ignoring unclean git...
+git --work-tree dist checkout --orphan gh-pages-c39815b
+Switched to a new branch 'gh-pages-c39815b'
+D	.appveyor.yml
+D	.babelrc
+D	.browserslistrc
+D	.editorconfig
+D	.eslintignore
+D	.eslintrc.json
+D	.gitignore
+D	README.md
+D	e2e/e2e.server.js
+D	e2e/e2e.test.js
+D	package.json
+D	pic/validator.png
+D	src/images/americanexpress.gif
+D	src/images/dinersclubinternational.gif
+D	src/images/discovercard.gif
+D	src/images/jcb.gif
+D	src/images/mastercard.gif
+D	src/images/mir.gif
+D	src/images/visa.gif
+D	src/images/visaelectron.gif
+D	src/index.html
+D	src/index.js
+D	src/js/Gui.js
+D	src/js/Logic.js
+D	src/js/__tests__/functions.test.js
+D	src/js/__tests__/jsdom.test.js
+D	src/js/app.js
+D	src/js/functions.js
+D	src/js/paysystems.json
+D	src/js/widget.js
+D	src/license.txt
+D	src/style.css
+D	webpack.common.js
+D	webpack.dev.js
+D	webpack.prod.js
+D	yarn.lock
+git --work-tree dist add --all
+git --work-tree dist commit -m c39815b
+On branch gh-pages-c39815b
+Initial commit
+nothing to commit (create/copy files and use "git add" to track)
+aborted: problem committing directory to local branch
+Command exited with code 1
+Build failed
